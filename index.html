@@ -1,145 +1,444 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body class="">
-	  <div class="container cube">
-		<div class="back side">
-			<!-- 4-ая грань - задняя -->
-			<table>
-				<tr>
-					<td data-edge="4" data-row="3" data-column="1" class="black"></td>
-					<td data-edge="4" data-row="3" data-column="2" class="black"></td>
-					<td data-edge="4" data-row="3" data-column="3" class="black"></td>
-				</tr>
-				<tr>
-					<td data-edge="4" data-row="2" data-column="1" class="black"></td>
-					<td data-edge="4" data-row="2" data-column="2" class="black">4</td>
-					<td data-edge="4" data-row="2" data-column="3" class="black"></td>
-				</tr>
-				<tr>
-					<td data-edge="4" data-row="1" data-column="1" class="black"></td>
-					<td data-edge="4" data-row="1" data-column="2" class="black"></td>
-					<td data-edge="4" data-row="1" data-column="3" class="black"></td>
-				</tr>
-			</table>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>repl.it</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<main>
+			<div class="container cube">
+				<div class="back side">
+					<!-- 4-ая грань - задняя -->
+					<table>
+						<tr>
+							<td
+								data-edge="4"
+								data-row="3"
+								data-column="1"
+								class="black"
+							></td>
+							<td
+								data-edge="4"
+								data-row="3"
+								data-column="2"
+								class="black"
+							></td>
+							<td
+								data-edge="4"
+								data-row="3"
+								data-column="3"
+								class="black"
+							></td>
+						</tr>
+						<tr>
+							<td
+								data-edge="4"
+								data-row="2"
+								data-column="1"
+								class="black"
+							></td>
+							<td
+								data-edge="4"
+								data-row="2"
+								data-column="2"
+								class="black"
+							>
+								4
+							</td>
+							<td
+								data-edge="4"
+								data-row="2"
+								data-column="3"
+								class="black"
+							></td>
+						</tr>
+						<tr>
+							<td
+								data-edge="4"
+								data-row="1"
+								data-column="1"
+								class="black"
+							></td>
+							<td
+								data-edge="4"
+								data-row="1"
+								data-column="2"
+								class="black"
+							></td>
+							<td
+								data-edge="4"
+								data-row="1"
+								data-column="3"
+								class="black"
+							></td>
+						</tr>
+					</table>
+				</div>
+				<div class="left side">
+					<!-- 5-ая грань - левая боковая -->
+					<table>
+						<tr>
+							<td data-edge="5" data-row="1" class="green"></td>
+							<td data-edge="5" data-row="1" class="green"></td>
+							<td
+								data-edge="5"
+								data-row="1"
+								data-adjoining-edge="1"
+								data-adjoining-edge-rotation-clockwise="true"
+								class="green"
+								data-event="edge-left"
+							>
+								🡸
+							</td>
+						</tr>
+						<tr>
+							<td data-edge="5" data-row="2" class="green"></td>
+							<td data-edge="5" data-row="2" class="green">5</td>
+							<td
+								data-edge="5"
+								data-row="2"
+								class="green"
+								data-event="edge-left"
+							>
+								🡸
+							</td>
+						</tr>
+						<tr>
+							<td data-edge="5" data-row="3" class="green"></td>
+							<td data-edge="5" data-row="3" class="green"></td>
+							<td
+								data-edge="5"
+								data-row="3"
+								data-adjoining-edge="6"
+								data-adjoining-edge-rotation-clockwise="false"
+								class="green"
+								data-event="edge-left"
+							>
+								🡸
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="right side">
+					<!-- 3-ая грань - правая боковая -->
+					<table>
+						<tr>
+							<td
+								data-edge="3"
+								data-row="1"
+								data-adjoining-edge="1"
+								data-adjoining-edge-rotation-clockwise="false"
+								class="blue"
+								data-event="edge-right"
+							>
+								🡺
+							</td>
+							<td data-edge="3" data-row="1" class="blue"></td>
+							<td data-edge="3" data-row="1" class="blue"></td>
+						</tr>
+						<tr>
+							<td
+								data-edge="3"
+								data-row="2"
+								class="blue"
+								data-event="edge-right"
+							>
+								🡺
+							</td>
+							<td data-edge="3" data-row="2" class="blue">3</td>
+							<td data-edge="3" data-row="2" class="blue"></td>
+						</tr>
+						<tr>
+							<td
+								data-edge="3"
+								data-row="3"
+								data-adjoining-edge="6"
+								class="blue"
+								data-event="edge-right"
+								data-adjoining-edge-rotation-clockwise="true"
+							>
+								🡺
+							</td>
+							<td data-edge="3" data-row="3" class="blue"></td>
+							<td data-edge="3" data-row="3" class="blue"></td>
+						</tr>
+					</table>
+				</div>
+				<div class="top side">
+					<!-- 1-ая грань - верхняя -->
+					<table>
+						<tr>
+							<td
+								data-edge="1"
+								data-row="1"
+								data-column="1"
+								data-adjoining-edge="4"
+								data-adjoining-edge-rotation-clockwise="true"
+								class="red"
+								data-event="top-edge-left"
+							>
+								🡸
+							</td>
+							<td
+								data-edge="1"
+								data-row="1"
+								data-column="2"
+								class="red"
+							></td>
+							<td
+								data-edge="1"
+								data-row="1"
+								data-column="3"
+								data-adjoining-edge="4"
+								data-adjoining-edge-rotation-clockwise="false"
+								class="red"
+								data-event="top-edge-right"
+							>
+								🡺
+							</td>
+						</tr>
+						<tr>
+							<td
+								data-edge="1"
+								data-row="2"
+								data-column="1"
+								class="red"
+								data-event="top-edge-left"
+							>
+								🡸
+							</td>
+							<td
+								data-edge="1"
+								data-row="2"
+								data-column="2"
+								class="red"
+							>
+								1
+							</td>
+							<td
+								data-edge="1"
+								data-row="2"
+								data-column="3"
+								class="red"
+								data-event="top-edge-right"
+							>
+								🡺
+							</td>
+						</tr>
+						<tr>
+							<td
+								data-edge="1"
+								data-row="3"
+								data-column="1"
+								data-adjoining-edge="2"
+								data-adjoining-edge-rotation-clockwise="false"
+								class="red"
+								data-event="top-edge-left"
+							>
+								🡸
+							</td>
+							<td
+								data-edge="1"
+								data-row="3"
+								data-column="2"
+								class="red"
+							></td>
+							<td
+								data-edge="1"
+								data-row="3"
+								data-column="3"
+								data-adjoining-edge="2"
+								data-adjoining-edge-rotation-clockwise="true"
+								class="red"
+								data-event="top-edge-right"
+							>
+								🡺
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="bottom side">
+					<!-- 6-ая грань - нижняя -->
+					<table>
+						<tr>
+							<td
+								data-edge="6"
+								data-row="1"
+								data-column="1"
+								class="orange"
+							></td>
+							<td
+								data-edge="6"
+								data-row="1"
+								data-column="2"
+								class="orange"
+							></td>
+							<td
+								data-edge="6"
+								data-row="1"
+								data-column="3"
+								class="orange"
+							></td>
+						</tr>
+						<tr>
+							<td
+								data-edge="6"
+								data-row="2"
+								data-column="1"
+								class="orange"
+							></td>
+							<td
+								data-edge="6"
+								data-row="2"
+								data-column="2"
+								class="orange"
+							>
+								6
+							</td>
+							<td
+								data-edge="6"
+								data-row="2"
+								data-column="3"
+								class="orange"
+							></td>
+						</tr>
+						<tr>
+							<td
+								data-edge="6"
+								data-row="3"
+								data-column="1"
+								class="orange"
+							></td>
+							<td
+								data-edge="6"
+								data-row="3"
+								data-column="2"
+								class="orange"
+							></td>
+							<td
+								data-edge="6"
+								data-row="3"
+								data-column="3"
+								class="orange"
+							></td>
+						</tr>
+					</table>
+				</div>
+				<div class="front side">
+					<!-- 2-ая грань - фронтальная -->
+					<table>
+						<tr>
+							<td
+								data-edge="2"
+								data-row="1"
+								data-column="1"
+								data-adjoining-edge="5"
+								data-adjoining-edge-rotation-clockwise="false"
+								class="yellow"
+								data-event="edge-top"
+							>
+								🡹
+							</td>
+							<td
+								data-edge="2"
+								data-row="1"
+								data-column="2"
+								class="yellow"
+								data-event="edge-top"
+							>
+								🡹
+							</td>
+							<td
+								data-edge="2"
+								data-row="1"
+								data-column="3"
+								data-adjoining-edge="3"
+								data-adjoining-edge-rotation-clockwise="true"
+								class="yellow"
+								data-event="edge-top"
+							>
+								🡹
+							</td>
+						</tr>
+						<tr>
+							<td
+								data-edge="2"
+								data-row="2"
+								data-column="1"
+								class="yellow"
+							></td>
+							<td
+								data-edge="2"
+								data-row="2"
+								data-column="2"
+								class="yellow"
+							>
+								2
+							</td>
+							<td
+								data-edge="2"
+								data-row="2"
+								data-column="3"
+								class="yellow"
+							></td>
+						</tr>
+						<tr>
+							<td
+								data-edge="2"
+								data-row="3"
+								data-column="1"
+								data-adjoining-edge="5"
+								data-adjoining-edge-rotation-clockwise="true"
+								class="yellow"
+								data-event="edge-down"
+							>
+								🡻
+							</td>
+							<td
+								data-edge="2"
+								data-row="3"
+								data-column="2"
+								class="yellow"
+								data-event="edge-down"
+							>
+								🡻
+							</td>
+							<td
+								data-edge="2"
+								data-row="3"
+								data-column="3"
+								data-adjoining-edge="3"
+								data-adjoining-edge-rotation-clockwise="false"
+								class="yellow"
+								data-event="edge-down"
+							>
+								🡻
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</main>
+
+		<div>
+			<h3>Вращение кубика</h3>
+			<div class="rotation-wrapper">
+				<input
+					type="range"
+					id="rotation"
+					name="rotation"
+					min="0"
+					max="23"
+					step="1"
+					value="0"
+				/>
+				<label for="rotation">Вращение</label>
+			</div>
 		</div>
 
-		<div class="left side">
-			<!-- 5-ая грань - левая боковая -->
-			<table>
-				<tr>
-					<td data-edge="5" data-row="1" class="green"></td>
-					<td data-edge="5" data-row="1" class="green"></td>
-					<td data-edge="5" data-row="1" data-adjoining-edge="1" data-adjoining-edge-rotation-clockwise="true" class="green" data-event="edge-left">🡸</td>
-				</tr>
-				<tr>
-					<td data-edge="5" data-row="2" class="green"></td>
-					<td data-edge="5" data-row="2" class="green">5</td>
-					<td data-edge="5" data-row="2" class="green" data-event="edge-left">🡸</td>
-				</tr>
-				<tr>
-					<td data-edge="5" data-row="3" class="green"></td>
-					<td data-edge="5" data-row="3" class="green"></td>
-					<td data-edge="5" data-row="3" data-adjoining-edge="6" data-adjoining-edge-rotation-clockwise="false" class="green" data-event="edge-left">🡸</td>
-				</tr>
-			</table>
-		</div>
-
-		<div class="right side">
-			<!-- 3-ая грань - правая боковая -->
-			<table>
-				<tr>
-					<td data-edge="3" data-row="1" data-adjoining-edge="1" data-adjoining-edge-rotation-clockwise="false" class="blue" data-event="edge-right">🡺</td>
-					<td data-edge="3" data-row="1" class="blue"></td>
-					<td data-edge="3" data-row="1" class="blue"></td>
-				</tr>
-				<tr>
-					<td data-edge="3" data-row="2" class="blue" data-event="edge-right">🡺</td>
-					<td data-edge="3" data-row="2" class="blue">3</td>
-					<td data-edge="3" data-row="2" class="blue"></td>
-				</tr>
-				<tr>
-					<td data-edge="3" data-row="3" data-adjoining-edge="6" class="blue" data-event="edge-right" data-adjoining-edge-rotation-clockwise="true">🡺</td>
-					<td data-edge="3" data-row="3" class="blue"></td>
-					<td data-edge="3" data-row="3" class="blue"></td>
-				</tr>
-			</table>
-		</div>
-
-		<div class="top side">
-			<!-- 1-ая грань - верхняя -->
-			<table>
-				<tr>
-					<td data-edge="1" data-row="1" data-column="1" data-adjoining-edge="4" data-adjoining-edge-rotation-clockwise="true" class="red" data-event="top-edge-left">🡸</td>
-					<td data-edge="1" data-row="1" data-column="2" class="red"></td>
-					<td data-edge="1" data-row="1" data-column="3" data-adjoining-edge="4" data-adjoining-edge-rotation-clockwise="false" class="red" data-event="top-edge-right">🡺</td>
-				</tr>
-				<tr>
-					<td data-edge="1" data-row="2" data-column="1" class="red" data-event="top-edge-left">🡸</td>
-					<td data-edge="1" data-row="2" data-column="2" class="red">1</td>
-					<td data-edge="1" data-row="2" data-column="3" class="red" data-event="top-edge-right">🡺</td>
-				</tr>
-				<tr>
-					<td data-edge="1" data-row="3" data-column="1" data-adjoining-edge="2" data-adjoining-edge-rotation-clockwise="false" class="red" data-event="top-edge-left">🡸</td>
-					<td data-edge="1" data-row="3" data-column="2" class="red"></td>
-					<td data-edge="1" data-row="3" data-column="3" data-adjoining-edge="2" data-adjoining-edge-rotation-clockwise="true" class="red" data-event="top-edge-right">🡺</td>
-				</tr>
-			</table>
-		</div>
-
-		<div class="bottom side">
-			<!-- 6-ая грань - нижняя -->
-			<table>
-				<tr>
-					<td data-edge="6" data-row="1" data-column="1" class="orange"></td>
-					<td data-edge="6" data-row="1" data-column="2" class="orange"></td>
-					<td data-edge="6" data-row="1" data-column="3" class="orange"></td>
-				</tr>
-				<tr>
-					<td data-edge="6" data-row="2" data-column="1" class="orange"></td>
-					<td data-edge="6" data-row="2" data-column="2" class="orange">6</td>
-					<td data-edge="6" data-row="2" data-column="3" class="orange"></td>
-				</tr>
-				<tr>
-					<td data-edge="6" data-row="3" data-column="1" class="orange"></td>
-					<td data-edge="6" data-row="3" data-column="2" class="orange"></td>
-					<td data-edge="6" data-row="3" data-column="3" class="orange"></td>
-				</tr>
-			</table>
-		</div>
-
-		<div class="front side">
-			<!-- 2-ая грань - фронтальная -->
-			<table>
-				<tr>
-					<td data-edge="2" data-row="1" data-column="1" data-adjoining-edge="5" data-adjoining-edge-rotation-clockwise="false" class="yellow" data-event="edge-top">🡹</td>
-					<td data-edge="2" data-row="1" data-column="2" class="yellow" data-event="edge-top">🡹</td>
-					<td data-edge="2" data-row="1" data-column="3" data-adjoining-edge="3" data-adjoining-edge-rotation-clockwise="true" class="yellow" data-event="edge-top">🡹</td>
-				</tr>
-				<tr>
-					<td data-edge="2" data-row="2" data-column="1" class="yellow"></td>
-					<td data-edge="2" data-row="2" data-column="2" class="yellow">2</td>
-					<td data-edge="2" data-row="2" data-column="3" class="yellow"></td>
-				</tr>
-				<tr>
-					<td data-edge="2" data-row="3" data-column="1" data-adjoining-edge="5" data-adjoining-edge-rotation-clockwise="true" class="yellow" data-event="edge-down">🡻</td>
-					<td data-edge="2" data-row="3" data-column="2" class="yellow" data-event="edge-down">🡻</td>
-					<td data-edge="2" data-row="3" data-column="3" data-adjoining-edge="3" data-adjoining-edge-rotation-clockwise="false" class="yellow" data-event="edge-down">🡻</td>
-				</tr>
-			</table>
-		</div>
-	</div>
-
-<!-- <div class="flex-row">
-
-</div> -->
-
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.1.0/math.min.js" integrity="sha512-rCvDXOM8HOkDDjC0l9vQPhUg2n0rKlcsCtDjWG0ajYmVfjgtO6egt/RdSbKSzFCIUaE/OQRwmiU/4PmOeK3J+Q==" crossorigin="anonymous"></script> -->
-    <script src="script.js"></script>
-  </body>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.1.0/math.min.js" integrity="sha512-rCvDXOM8HOkDDjC0l9vQPhUg2n0rKlcsCtDjWG0ajYmVfjgtO6egt/RdSbKSzFCIUaE/OQRwmiU/4PmOeK3J+Q==" crossorigin="anonymous"></script> -->
+		<script src="script.js"></script>
+	</body>
 </html>
