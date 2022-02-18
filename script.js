@@ -48,7 +48,6 @@ rotation.addEventListener('input', () => {
 	]
 
 	const angle = rotation.value
-	console.log(viewingAngles[0])
 	cube.style.transform = viewingAngles[angle]
 })
 

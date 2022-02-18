@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>repl.it</title>
+		<title>Кубик рубика</title>
 		<link href="style.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
@@ -422,9 +422,10 @@
 			</div>
 		</main>
 
-		<div>
-			<h3>Вращение кубика</h3>
+		<div class="controls-wrapper">
+			<h3 class="controls-header">Вращение кубика</h3>
 			<div class="rotation-wrapper">
+				<label for="rotation">Вращение</label>
 				<input
 					type="range"
 					id="rotation"
@@ -434,11 +435,100 @@
 					step="1"
 					value="0"
 				/>
-				<label for="rotation">Вращение</label>
+			</div>
+
+			<div class="movements-wrapper">
+				<h3>Движения</h3>
+
+				<div class="movements-button-wrapper">
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/r.svg"
+						/>
+						R
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/r-hatch.svg"
+						/>
+						R'
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/l.svg"
+						/>
+						L
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/l-hatch.svg"
+						/>
+						L'
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/u.svg"
+						/>
+						U
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/u-hatch.svg"
+						/>
+						U'
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/d.svg"
+						/>
+						D
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/d-hatch.svg"
+						/>
+						D'
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/f.svg"
+						/>
+						F
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/f-hatch.svg"
+						/>
+						F'
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/b.svg"
+						/>
+						B
+					</button>
+					<button class="movements-button">
+						<img
+							class="movements-button-image"
+							src="./images/b-hatch.svg"
+						/>
+						B'
+					</button>
+				</div>
 			</div>
 		</div>
 
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.1.0/math.min.js" integrity="sha512-rCvDXOM8HOkDDjC0l9vQPhUg2n0rKlcsCtDjWG0ajYmVfjgtO6egt/RdSbKSzFCIUaE/OQRwmiU/4PmOeK3J+Q==" crossorigin="anonymous"></script> -->
 		<script src="script.js"></script>
 	</body>
 </html>
