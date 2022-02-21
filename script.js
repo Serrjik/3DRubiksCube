@@ -18,6 +18,39 @@ let edge6 = getEdge(6)
 
 // cube.style.transform = 'rotateX(235deg) rotateY(0deg) rotateZ(315deg)'
 
+/*
+Порядок обработки граней в зависимости от угла поворота кубика. Смотрим
+	спереди справа и напротив,
+	сверху и напротив,
+	спереди слева и напротив.
+*/
+const edgesOrder = [
+	[3, 5, 4, 2, 1, 6],
+	[4, 2, 5, 3, 1, 6],
+	[5, 3, 2, 4, 1, 6],
+	[2, 4, 3, 5, 1, 6],
+	[3, 5, 1, 6, 2, 4],
+	[1, 6, 5, 3, 2, 4],
+	[5, 3, 6, 1, 2, 4],
+	[6, 1, 3, 5, 2, 4],
+	[6, 1, 4, 2, 3, 5],
+	[4, 2, 1, 6, 3, 5],
+	[1, 6, 2, 4, 3, 5],
+	[2, 4, 6, 1, 3, 5],
+	[5, 3, 1, 6, 4, 2],
+	[1, 6, 3, 5, 4, 2],
+	[3, 5, 6, 1, 4, 2],
+	[6, 1, 5, 3, 4, 2],
+	[2, 4, 1, 6, 5, 3],
+	[1, 6, 4, 2, 5, 3],
+	[4, 2, 6, 1, 5, 3],
+	[6, 1, 2, 4, 5, 3],
+	[5, 3, 4, 2, 6, 1],
+	[4, 2, 3, 5, 6, 1],
+	[3, 5, 2, 4, 6, 1],
+	[2, 4, 5, 3, 6, 1],
+]
+
 const rotation = document.getElementById('rotation')
 rotation.addEventListener('input', () => {
 	const viewingAngles = [
@@ -48,6 +81,7 @@ rotation.addEventListener('input', () => {
 	]
 
 	const angle = rotation.value
+	console.log('angle: ', angle)
 	cube.style.transform = viewingAngles[angle]
 })
 
