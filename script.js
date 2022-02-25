@@ -51,35 +51,38 @@ const edgesOrder = [
 	[2, 4, 5, 3, 6, 1],
 ]
 
+const viewingAngles = [
+	'rotateX(235deg) rotateY(0deg) rotateZ(315deg)',
+	'rotateX(145deg) rotateY(315deg) rotateZ(270deg)',
+	'rotateX(55deg) rotateY(0deg) rotateZ(225deg)',
+	'rotateX(325deg) rotateY(45deg) rotateZ(270deg)',
+	'rotateX(325deg) rotateY(315deg) rotateZ(0deg)',
+	'rotateX(325deg) rotateY(315deg) rotateZ(90deg)',
+	'rotateX(325deg) rotateY(315deg) rotateZ(180deg)',
+	'rotateX(325deg) rotateY(315deg) rotateZ(270deg)',
+	'rotateX(55deg) rotateY(180deg) rotateZ(45deg)',
+	'rotateX(325deg) rotateY(225deg) rotateZ(0deg)',
+	'rotateX(235deg) rotateY(180deg) rotateZ(315deg)',
+	'rotateX(145deg) rotateY(135deg) rotateZ(0deg)',
+	'rotateX(325deg) rotateY(135deg) rotateZ(0deg)',
+	'rotateX(145deg) rotateY(45deg) rotateZ(90deg)',
+	'rotateX(145deg) rotateY(45deg) rotateZ(0deg)',
+	'rotateX(145deg) rotateY(45deg) rotateZ(270deg)',
+	'rotateX(325deg) rotateY(45deg) rotateZ(0deg)',
+	'rotateX(235deg) rotateY(0deg) rotateZ(45deg)',
+	'rotateX(145deg) rotateY(315deg) rotateZ(0deg)',
+	'rotateX(55deg) rotateY(0deg) rotateZ(315deg)',
+	'rotateX(55deg) rotateY(180deg) rotateZ(315deg)',
+	'rotateX(325deg) rotateY(225deg) rotateZ(270deg)',
+	'rotateX(235deg) rotateY(180deg) rotateZ(225deg)',
+	'rotateX(145deg) rotateY(135deg) rotateZ(270deg)',
+]
+
+// TODO: Строку удалить, когда станет не нужна.
+cube.style.transform = viewingAngles[1]
+
 const rotation = document.getElementById('rotation')
 rotation.addEventListener('input', () => {
-	const viewingAngles = [
-		'rotateX(235deg) rotateY(0deg) rotateZ(315deg)',
-		'rotateX(145deg) rotateY(315deg) rotateZ(270deg)',
-		'rotateX(55deg) rotateY(0deg) rotateZ(225deg)',
-		'rotateX(325deg) rotateY(45deg) rotateZ(270deg)',
-		'rotateX(325deg) rotateY(315deg) rotateZ(0deg)',
-		'rotateX(325deg) rotateY(315deg) rotateZ(90deg)',
-		'rotateX(325deg) rotateY(315deg) rotateZ(180deg)',
-		'rotateX(325deg) rotateY(315deg) rotateZ(270deg)',
-		'rotateX(55deg) rotateY(180deg) rotateZ(45deg)',
-		'rotateX(325deg) rotateY(225deg) rotateZ(0deg)',
-		'rotateX(235deg) rotateY(180deg) rotateZ(315deg)',
-		'rotateX(145deg) rotateY(135deg) rotateZ(0deg)',
-		'rotateX(325deg) rotateY(135deg) rotateZ(0deg)',
-		'rotateX(145deg) rotateY(45deg) rotateZ(90deg)',
-		'rotateX(145deg) rotateY(45deg) rotateZ(0deg)',
-		'rotateX(145deg) rotateY(45deg) rotateZ(270deg)',
-		'rotateX(325deg) rotateY(45deg) rotateZ(0deg)',
-		'rotateX(235deg) rotateY(0deg) rotateZ(45deg)',
-		'rotateX(145deg) rotateY(315deg) rotateZ(0deg)',
-		'rotateX(55deg) rotateY(0deg) rotateZ(315deg)',
-		'rotateX(55deg) rotateY(180deg) rotateZ(315deg)',
-		'rotateX(325deg) rotateY(225deg) rotateZ(270deg)',
-		'rotateX(235deg) rotateY(180deg) rotateZ(225deg)',
-		'rotateX(145deg) rotateY(135deg) rotateZ(270deg)',
-	]
-
 	const angle = rotation.value
 	console.log('angle: ', angle)
 	cube.style.transform = viewingAngles[angle]
@@ -120,6 +123,8 @@ function getEdge(number) {
 	Принимает грани на которых находятся ряды и номер ряда.
 */
 function rowRotation(edges, row) {
+	console.log('rowRotation')
+
 	// if (edges.includes(edge4)) {
 	// 	edge4.reverse()
 	// }
