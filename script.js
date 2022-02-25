@@ -79,7 +79,7 @@ const viewingAngles = [
 ]
 
 // TODO: Строку удалить, когда станет не нужна.
-cube.style.transform = viewingAngles[1]
+cube.style.transform = viewingAngles[3]
 
 const rotation = document.getElementById('rotation')
 rotation.addEventListener('input', () => {
@@ -402,3 +402,10 @@ cube.querySelectorAll('[data-event="top-edge-right"]').forEach(item => {
 		edge5.reverse()
 	})
 })
+
+const movementsButtons = document.querySelectorAll('.movements-button')
+movementsButtons.forEach(movementsButton =>
+	movementsButton.addEventListener('click', () =>
+		console.log(movementsButton)
+	)
+)
